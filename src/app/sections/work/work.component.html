@@ -1,0 +1,154 @@
+<app-section-header></app-section-header>
+
+<!-- MAIN start -->
+<main>
+    <section class="box">
+      <div class="content flip-card flip-gallery">
+        <div class="work-bg-square card-front"></div>
+
+        <video
+          id="video-1"
+          src="videos/cafe-bean-video.mp4"
+          autoplay
+          muted
+          loop
+        ></video>
+
+        <video
+          id="video-2"
+          src="videos/dark-shine-video.mp4"
+          autoplay
+          muted
+          loop
+        ></video>
+
+        <video
+          id="video-3"
+          src="videos/ftc-video.mp4"
+          autoplay
+          muted
+          loop
+        ></video>
+
+        <video
+          id="video-4"
+          src="videos/fullerton-video.mp4"
+          autoplay
+          muted
+          loop
+        ></video>
+
+        <video
+          id="video-5"
+          src="videos/wedding-video.mp4"
+          autoplay
+          muted
+          loop
+        ></video>
+      </div>
+    </section>
+
+    <app-section-mini-nav [currentSection]="'work'"></app-section-mini-nav>
+
+    <section class="box">
+      <div class="padding-content content text-white bg-pink-75">
+        <h2>What I do ?</h2>
+        <section id="works">
+          <div class="overflow-hidden" data-video-selected="video-1">
+            <h3>Café Bean</h3>
+            <p>
+              Group project to create a mobile friendly fictional website.
+              Design of UI mocks and layouts from scratch. Texts and images
+              taken from internet.
+            </p>
+            <p>Technologies implemented: HTML, CSS, jQuery, Figma.</p>
+            <p>
+              You can find my code in
+              <a
+                href="https://github.com/Antonella-T/websites/tree/master/cafe-bean-group"
+                target="_blank"
+                class="link-light"
+                >GitHub</a
+              >.
+            </p>
+          </div>
+
+          <div class="overflow-hidden" data-video-selected="video-2">
+            <h3>Dark Shine website</h3>
+            <p>
+              Project to create a home page website with dark background,
+              practicing flexbox properties, jQuery galleries, fully
+              responsive website and mobile menu.
+            </p>
+            <p>Technologies implemented: HTML, CSS, jQuery, JS.</p>
+            <p>
+              You can find my code in
+              <a
+                href="https://github.com/Antonella-T/dark-shine-corporation"
+                target="_blank"
+                class="link-light"
+                >GitHub</a
+              >.
+            </p>
+          </div>
+
+          <div class="overflow-hidden" data-video-selected="video-3">
+            <h3>FTC website</h3>
+            <p>
+              Group project to create a mobile friendly fictional website.
+              Design of UI mocks and layouts from scratch. Texts and images
+              taken from internet.
+            </p>
+            <p>Technologies implemented: HTML, CSS, jQuery, Figma.</p>
+            <p>
+              You can find my code in
+              <a
+                href="https://github.com/Antonella-T/front-end-web-developer-site"
+                target="_blank"
+                class="link-light"
+                >GitHub</a
+              >.
+            </p>
+          </div>
+
+          <div class="overflow-hidden" data-video-selected="video-4">
+            <h3>Fullerton website</h3>
+            <p>
+              Project to create a home page website practicing flexbox
+              properties, jQuery galleries, fully responsive website and
+              mobile menu.
+            </p>
+            <p>Technologies implemented: HTML, CSS, jQuery, JS.</p>
+            <p>
+              You can find my code in
+              <a
+                href="https://github.com/Antonella-T/fullerton-corporation"
+                target="_blank"
+                class="link-light"
+                >GitHub</a
+              >.
+            </p>
+          </div>
+
+          <div class="overflow-hidden" data-video-selected="video-5">
+            <h3>Wedding</h3>
+            <p>
+              Project to create a home page website practicing flexbox
+              properties, forms, fully responsive website and mobile menu.
+            </p>
+            <p>Technologies implemented: HTML, CSS, jQuery.</p>
+            <p>
+              You can find my code in
+              <a
+                href="https://github.com/Antonella-T/wedding-website"
+                target="_blank"
+                class="link-light"
+                >GitHub</a
+              >.
+            </p>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <!-- MAIN end -->

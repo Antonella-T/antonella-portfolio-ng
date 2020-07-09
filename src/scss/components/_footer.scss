@@ -1,0 +1,18 @@
+/* FOOTER start */
+footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: .8rem;
+    align-items: center;
+}
+
+footer a {
+    margin: 17px 5px 17px 0;
+}
+
+footer span,
+footer a,
+.fa {
+    color: $darkRed;
+}
+/* FOOTER end */

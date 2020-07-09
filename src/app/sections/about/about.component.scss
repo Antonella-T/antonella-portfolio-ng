@@ -1,0 +1,18 @@
+@import "../../../scss/utils/variables";
+/* ABOUT-ME */
+.about-bg-square {
+    background-image: url(../../../assets/images/about-mobile.jpg);
+    background-size: contain;
+}
+
+.about-me a:hover {
+    text-decoration: underline;
+    color: $darkRed;
+}
+
+@media screen and (min-width: 769px) {
+    /* ABOUT */
+    .about-bg-square {
+        background-image: url(../../../assets/images/about-desktop.jpg);
+    }
+}

@@ -1,0 +1,49 @@
+/* NAVIGATION start */
+.navigation {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    line-height: 2rem;
+    font-family: 'Rasa', serif;
+    font-weight: 600;
+}
+
+nav.navigation {
+    display: none;
+}
+
+.navigation .box {
+    height: 44vw;
+    width: 44vw;
+}
+
+.navigation a.content {
+    padding: 0;
+}
+
+.navigation a.content * {
+    margin: 0;
+    color: black;
+    font-size: 2rem;
+    padding: 0 10%;
+}
+
+.navigation.mini-nav a.content * {
+    font-size: 1.2rem;
+}
+
+.navigation a.content .card-back {
+    color: $darkRed;
+}
+
+/* applies when navigation is in site header */
+.show-menu .navigation {
+    display: flex;
+}
+
+.show-menu .navigation h2,
+.show-menu .navigation span.card-back {
+    font-size: 2rem;
+}
+/* NAVIGATION end */

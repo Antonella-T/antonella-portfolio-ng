@@ -1,0 +1,101 @@
+@import "../../../scss/utils/variables";
+/* HEADER start */
+header {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    h1 {
+        flex-grow: 1;
+        margin: 5px 0 0px;
+
+        span:last-of-type {
+            -webkit-text-fill-color: #FFBAD7;
+        }
+
+        a:hover {
+            -webkit-text-fill-color: #FFBAD7;
+        }
+    }
+
+    h1,
+    h1 a {
+        -webkit-text-stroke: 1px black;
+        -webkit-text-fill-color: white;
+    }
+
+    i {
+        margin: 13px 0 15px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-basis: 100%;
+    }
+
+    .welcome-msg {
+        width: 330px;
+        line-height: 1.5rem;
+        font-size: 1.2rem;
+    }
+}
+/* HEADER end */
+
+
+/* MAIN HEADER start */
+header .hamburger-menu.fa {
+    font-size: x-large;
+    cursor: pointer;
+}
+
+header.show-menu {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding: 6vw;
+    background-color: #ffffffdb;
+}
+/* MAIN HEADER end */
+
+
+
+/* Desktop styles */
+@media screen and (min-width: 769px) {
+    /* HEADER */
+    header .box,
+    header .hamburger-menu.fa {
+        display: none;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+
+    header h1 span:first-of-type {
+        font-size: 3.5rem;
+    }
+
+    header .welcome-msg {
+        line-height: 2.2rem;
+        font-size: 1.5rem;
+    }
+}
+
+/*
+ * Landscape desktop design
+ * I want to detect if the user screen is in landscape or portrait to switch the box units 
+ * because the box size depends on the view available space.
+ */
+ @media all and (orientation: landscape) and (min-width: 769px) {
+    header {
+        width: 150vh;
+        align-items: flex-end;
+        min-height: 15vh;
+    }
+}

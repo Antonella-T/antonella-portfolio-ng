@@ -1,0 +1,29 @@
+<app-section-header></app-section-header>
+
+<!-- MAIN start -->
+<main>
+  <section class="box">
+    <div class="content blog-bg-square"></div>
+  </section>
+
+  <app-section-mini-nav [currentSection]="'blog'"></app-section-mini-nav>
+
+  <section class="box">
+    <div class="padding-content content text-dark-red bg-pink-50">
+      <h2>My blog</h2>
+
+      <section>
+        <div *ngFor="let blog of blogs" class="overflow-hidden">
+          <a href="{{blog.link}}" class="link-dark">
+            <h3>
+              <i class="fa fa-external-link" aria-hidden="true"></i> {{blog.title}}
+            </h3>
+          </a>
+          <p>{{blog.description}}</p>
+        </div>
+      </section>
+
+    </div>
+  </section>
+</main>
+<!-- MAIN end -->

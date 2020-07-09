@@ -1,0 +1,78 @@
+<app-section-header></app-section-header>
+
+<!-- MAIN start -->
+<main>
+    <section class="box">
+      <div class="content contact-bg-square"></div>
+    </section>
+
+    <app-section-mini-nav [currentSection]="'contact'"></app-section-mini-nav>
+
+    <section class="box">
+      <div class="padding-content content text-dark-red bg-pink-25">
+        <h2>Get in touch</h2>
+        <section>
+          <form>
+            <div class="form-elements">
+              <label for="name">Name*</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-elements">
+              <label for="email">Email*</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-elements">
+              <label for="message">Message*</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="20"
+                rows="8"
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-action">
+              <button type="submit">Send</button>
+            </div>
+          </form>
+
+          <div class="success-message display-none">
+            <h3>Your message was sent!</h3>
+            <p>
+              Thank you for getting in touch, I will be reaching out to you
+              soon.
+            </p>
+            <p>
+              For more information please find below links to my social
+              networks.
+            </p>
+          </div>
+        </section>
+
+        <div class="contact-links">
+          <a
+            href="mailto:antonellamtesta@gmail.com"
+            target="_blank"
+            title="Email me!"
+            ><i class="fa fa-envelope" aria-hidden="true"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/antonella-testa/"
+            target="_blank"
+            title="Find me in Linkedin"
+            ><i class="fa fa-linkedin-square" aria-hidden="true"></i
+          ></a>
+          <a
+            href="https://github.com/Antonella-T"
+            target="_blank"
+            title="Find me in GitHub"
+            ><i class="fa fa-github-square" aria-hidden="true"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- MAIN end -->
