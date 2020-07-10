@@ -1,313 +1,148 @@
 @import "scss/utils/variables";
+@import 'scss/components/navigation';
+@import 'scss/components/footer';
+@import 'scss/components/flip';
+@import 'scss/components/box';
 
 /* GLOBAL styles */
 * {
-    box-sizing: border-box;
-    /* Customized scroll bar for firefox. */
-    scrollbar-color: $darkRed rgba(255, 186, 215) ;
+  box-sizing: border-box;
+  /* Customized scroll bar for firefox. */
+  scrollbar-color: $darkRed rgba(255, 186, 215);
 }
 
 /* These are styles to costumize the scroll bar */
 *::-webkit-scrollbar-track {
-    background-color: rgba(255, 186, 215, 0.43);
+  background-color: rgba(255, 186, 215, 0.43);
 }
 
 *::-webkit-scrollbar {
-    width: 8px;
+  width: 8px;
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: $darkRed;
+  background-color: $darkRed;
 }
 
 html {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 body {
-    margin: 0;
-    font-family: roboto, sans-serif;
-    height: 100vh;
-    display: flex;
-    /*
+  margin: 0;
+  font-family: roboto, sans-serif;
+  height: 100vh;
+  display: flex;
+  /*
      * I use sizes for layout sections in vw or vh units, and when scrollbar is visible it breaks some layout parts.
      * I'm calculating the width of the body adding the scrollbar space to fix this.
      */
-    width: calc(100% + (100vw - 100%));
-    overflow-x: hidden;
+  width: calc(100% + (100vw - 100%));
+  overflow-x: hidden;
 }
 
 .container {
-    width: 100%;
-    max-width: 1900px;
-    margin: auto;
-    padding: 6vw;
+  width: 100%;
+  max-width: 1900px;
+  margin: auto;
+  padding: 6vw;
 }
 
 h1,
 h2,
 h3 {
-    font-family: 'Rasa', serif;
+  font-family: 'Rasa', serif;
 }
 
 h1 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 h2 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 h3 {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 button {
-    cursor: pointer;
-    background-color: $darkRed;
-    border: none;
-    padding: 6px 25px;
-    color: white;
-    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+  cursor: pointer;
+  background-color: $darkRed;
+  border: none;
+  padding: 6px 25px;
+  color: white;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
 }
 
 button:hover {
-    background-color: #ffbad7;
-    color: $darkRed;
+  background-color: $pink50;
+  color: $darkRed;
 }
 
-
-
-/* FLIP-BEHAIVORS start */
-.flip-card {
-    position: relative;
-    width: 100%;
-    transition: transform 0.9s;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-}
-
-.flip-card.flip-inline {
-    width: auto;
-}
-
-.flip-card .card-front,
-.flip-card .card-back {
-    transform: rotateX(0deg); /* To fix firefox mirror issues */
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    backface-visibility: hidden;
-}
-/* FLIP BEHAIVOR end */
-
-
-
-/* BOX start */
-.box {
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-
-.box:after {
-    content: '';
-    display: block;
-    padding-bottom: 100%;
-}
-
-.box h2,
-.box span,
-.mini-nav .box a,
-.navigation .box a {
-    align-items: center;
-}
-
-.box .content {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-}
-
-.box .padding-content {
-    padding: 6%;
-}
-
-.box .content section {
-    overflow: auto;
-    padding-right: 25px;
-}
-/* BOX end */
 
 
 /* HELPERS start */
 .bg-pink-100 {
-    background-color: #ff1879;
+  background-color: $pink100;
 }
 
 .bg-pink-75 {
-    background-color: #FF5DA1;
+  background-color: $pink75;
 }
 
 .bg-pink-50 {
-    background-color: #FFBAD7;
+  background-color: $pink50;
 }
 
 .bg-pink-25 {
-    background-color: #FFE8F2;
+  background-color: $pink25;
 }
 
 .text-dark-red {
-    color: $darkRed;
+  color: $darkRed;
 }
 
 .text-white {
-    color: white;
+  color: white;
 }
 
 .overflow-hidden {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .display-none {
-    display: none;
+  display: none;
 }
 
 .link-dark {
-    color: $darkRed;
-    font-weight: 600;
+  color: $darkRed;
+  font-weight: 600;
 }
 
 .link-dark:hover {
-    color: white;
+  color: white;
 }
 
 .link-light {
-    color: white;
-    font-weight: 600;
+  color: white;
+  font-weight: 600;
 }
 
 .link-light:hover {
-    color: $darkRed;
+  color: $darkRed;
 }
+
 /* HELPERS end */
-
-@import 'scss/components/navigation';
-@import 'scss/components/footer';
-
-
-/* HOME SECTION */
-.home-section h1 {
-    flex-grow: 0;
-    margin: 0;
-}
-
-.home-section > section:first-child:after {
-    padding-bottom: 230px;
-}
-
-.home-section h1 span {
-    display: inline-block;
-}
-
-.home-section .box .content.navigation {
-    flex-direction: row;
-}
-
-.home-section .box .content a {
-    font-size: 1.6rem;
-}
-
-
-
-/* ABOUT-ME 
-.about-bg-square {
-    background-image: url(assets/images/about-mobile.jpg);
-    background-size: contain;
-}
-
-.about-me a:hover {
-    text-decoration: underline;
-    color: $darkRed;
-}
-
-*/
-/* WORK */
-.work-bg-square {
-    background-image: url(assets/images/work-mobile.jpg);
-    background-size: contain;
-}
-
-video {
-    display: none;
-}
-
-
-/* BLOG */
-.blog-bg-square {
-    background-image: url(assets/images/blog-desktop.jpg);
-    background-size: contain;
-}
-
-.fa-external-link {
-    font-size: 1.2rem;
-    margin-right: 5px;
-}
-
-
-/* CONTACT start */
-.contact-bg-square {
-    background-image: url(assets/images/contact-mobile.jpg);
-    background-size: contain;
-}
-
-form .form-elements {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-}
-
-form input,
-form textarea {
-    background-color: transparent;
-    border: 1px solid $darkRed;
-    padding: 6px;
-    outline: none;
-}
-
-form .form-action {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.fa-github-square,
-.fa-linkedin-square,
-.fa-envelope {
-    font-size: 1.5rem;
-}
-
-.contact-links {
-    display: flex;
-    justify-content: flex-end;
-    margin: 15px 23px;
-}
-
-.contact-links a {
-    margin-left: 20px;
-}
 
 
 
@@ -317,176 +152,91 @@ form .form-action {
  * because the box size depends on the view available space.
  */
 @media all and (orientation: landscape) and (min-width: 769px) {
-    .box {
-        width: 76vh;
-        max-width: 46vw;
-        max-height: 46vw;
-        height: 76vh;
-    }
+  .box {
+    width: 76vh;
+    max-width: 46vw;
+    max-height: 46vw;
+    height: 76vh;
+  }
 
-    .navigation .box {
-        height: 38vh;
-        width: 38vh;
-        max-width: 23vw;
-        max-height: 23vw;
-    }
+  .navigation .box {
+    height: 38vh;
+    width: 38vh;
+    max-width: 23vw;
+    max-height: 23vw;
+  }
 
-    header {
-        width: 150vh;
-        align-items: flex-end;
-        min-height: 15vh;
-    }
+  header {
+    width: 150vh;
+    align-items: flex-end;
+    min-height: 15vh;
+  }
 
-    footer {
-        width: 150vh;
-        min-height: 9vh;
-    }
+  footer {
+    width: 150vh;
+    min-height: 9vh;
+  }
 
-    .home-section {
-        padding-top: 15vh;
-    }
+  .home-section {
+    padding-top: 15vh;
+  }
 
-}
-
-
-
-/* I have implemented this media query because I want to desable animation in mobile devices due the inhability of hover. */
-@media (hover: hover) {
-    /* flip right */
-    .flip-card.flip-right:hover {
-        transform: rotateY(180deg);
-    }
-
-    .flip-card .card-back.flip-right {
-        transform: rotateY(180deg);
-    }
-
-    /* flip left */
-    .flip-card.flip-left:hover {
-        transform: rotateY(-180deg);
-    }
-
-    .flip-card .card-back.flip-left {
-        transform: rotateY(-180deg);
-    }
-
-    /* flip up */
-    .flip-card.flip-up:hover {
-        transform: rotateX(180deg);
-    }
-
-    .flip-card .card-back.flip-up {
-        transform: rotateX(180deg);
-    }
-
-    /* flip down */
-    .flip-card.flip-down:hover {
-        transform: rotateX(-180deg);
-    }
-
-    .flip-card .card-back.flip-down {
-        transform: rotateX(-180deg);
-    }
-
-    .flip-gallery > *:not(.card-back),
-    .flip-gallery > *:not(.card-front) {
-        display: none;
-    }
-
-    .flip-gallery > .card-back,
-    .flip-gallery > .card-front {
-        display: block;
-    }
-
-    video {
-        display: block;
-    }
 }
 
 
 
 /* Desktop styles */
 @media screen and (min-width: 769px) {
-    /* Global */
-    .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 0 4vw;
-        height: 100vh;
-    }
 
-    main {
-        display: flex;
-        flex-basis: 100%;
-        justify-content: center;
-        position: relative;
-    }
+  /* Global */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 4vw;
+    height: 100vh;
+  }
 
-    main h2 a {
-        font-size: 1.4rem;
-    }
+  main {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    position: relative;
+  }
 
-    /* HELPERS */
-    .hide-content {
-        display: none !important;
-    }
+  main h2 a {
+    font-size: 1.4rem;
+  }
 
-    .box .padding-content {
-        padding: 8% 11%;
-    }
+  /* HELPERS */
+  .hide-content {
+    display: none !important;
+  }
 
-    /* HOME */
-    .home-section h1 {
-        font-size: 4.5rem;
-        line-height: 4.2rem;
-    }
+  .box .padding-content {
+    padding: 8% 11%;
+  }
 
-    .home-section .box .content {
-        padding: 0;
-        align-items: flex-start;
-    }
+  /* HOME */
+  .home-section h1 {
+    font-size: 4.5rem;
+    line-height: 4.2rem;
+  }
 
-    /* ABOUT 
-    .about-bg-square {
-        background-image: url(assets/images/about-desktop.jpg);
-    }*/
-
-    /* WORK */
-    .work-bg-square {
-        background-image: url(assets/images/work-desktop.jpg);
-    }
-
-    /* BLOG */
-    .blog-bg-square {
-        background-image: url(assets/images/blog-desktop.jpg);
-    }
-
-    /* CONTACT */
-    .contact-bg-square {
-        background-image: url(assets/images/contact-desktop.jpg);
-    }
+  .home-section .box .content {
+    padding: 0;
+    align-items: flex-start;
+  }
 }
 
 
 
 /* To work in IE11 */
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
-    /* Put your IE-only styles here. Works for IS 10 & IE 11*/
-    .box .content {
-        display: block;
-        position: relative;
-    }
-    
-    .box .content.navigation {
-        display: flex;
-    }
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
 
-    .box .content section {
-        max-height: 75%;
-    }
-
-    video {
-        display: none;
-    }
+  /* Put your IE-only styles here. Works for IS 10 & IE 11*/
+  video {
+    display: none;
+  }
 }

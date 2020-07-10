@@ -1,0 +1,49 @@
+@import "../../../scss/utils/variables";
+
+/* CONTACT start */
+.contact-bg-square {
+  background-image: url(../../../assets/images/contact-mobile.jpg);
+  background-size: contain;
+}
+
+form .form-elements {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+form input,
+form textarea {
+  background-color: transparent;
+  border: 1px solid $darkRed;
+  padding: 6px;
+  outline: none;
+}
+
+form .form-action {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.fa-github-square,
+.fa-linkedin-square,
+.fa-envelope {
+  font-size: 1.5rem;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: flex-end;
+  margin: 15px 23px;
+}
+
+.contact-links a {
+  margin-left: 20px;
+}
+
+@media screen and (min-width: 769px) {
+  /* CONTACT */
+  .contact-bg-square {
+    background-image: url(../../../assets/images/contact-desktop.jpg);
+  }
+}

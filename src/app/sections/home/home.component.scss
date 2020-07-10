@@ -1,0 +1,21 @@
+/* HOME SECTION */
+.home-section h1 {
+  flex-grow: 0;
+  margin: 0;
+}
+
+.home-section > section:first-child:after {
+  padding-bottom: 230px;
+}
+
+.home-section h1 span {
+  display: inline-block;
+}
+
+.home-section .box .content.navigation {
+  flex-direction: row;
+}
+
+.home-section .box .content a {
+  font-size: 1.6rem;
+}

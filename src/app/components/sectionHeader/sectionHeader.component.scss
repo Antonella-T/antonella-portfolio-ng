@@ -11,11 +11,11 @@ header {
         margin: 5px 0 0px;
 
         span:last-of-type {
-            -webkit-text-fill-color: #FFBAD7;
+            -webkit-text-fill-color: $pink50;
         }
 
         a:hover {
-            -webkit-text-fill-color: #FFBAD7;
+            -webkit-text-fill-color: $pink50;
         }
     }
 

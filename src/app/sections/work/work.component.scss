@@ -1,0 +1,21 @@
+/* WORK */
+.work-bg-square {
+  background-image: url(../../../assets/images/work-mobile.jpg);
+  background-size: contain;
+}
+
+video {
+  display: none;
+}
+
+.fa-external-link {
+  font-size: 1.2rem;
+  margin-right: 5px;
+}
+
+@media screen and (min-width: 769px) {
+  /* WORK */
+  .work-bg-square {
+    background-image: url(assets/images/work-desktop.jpg);
+  }
+}
