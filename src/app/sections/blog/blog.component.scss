@@ -1,12 +1,12 @@
 /* BLOG */
 .blog-bg-square {
-  background-image: url(assets/images/blog-desktop.jpg);
+  background-image: url(../../../assets/images/blog-desktop.jpg);
   background-size: contain;
 }
 
 @media screen and (min-width: 769px) {
   /* BLOG */
   .blog-bg-square {
-    background-image: url(assets/images/blog-desktop.jpg);
+    background-image: url(../../../assets/images/blog-desktop.jpg);
 }
 }

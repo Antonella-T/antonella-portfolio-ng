@@ -10,6 +10,7 @@ import { WorkComponent } from './sections/work/work.component';
 import { ContactComponent } from './sections/contact/contact.component';
 import { SectionHeaderComponent } from './components/sectionHeader/sectionHeader.component';
 import { SectionMiniNavComponent } from './components/sectionMiniNav/sectionMiniNav.component';
+import { NavigationService } from './services/navigation.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,9 @@ import { SectionMiniNavComponent } from './components/sectionMiniNav/sectionMini
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    NavigationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
